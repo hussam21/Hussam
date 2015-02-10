@@ -83,7 +83,7 @@ public class DogsandHumansGUI extends JFrame {
 		btnBuyDog.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				human.buyDog(new Dog(textArea_1.getText()));
-				//Dog dog= new Dog("rasse");
+			
 			}
 		});
 		btnBuyDog.setBounds(150, 48, 89, 23);
