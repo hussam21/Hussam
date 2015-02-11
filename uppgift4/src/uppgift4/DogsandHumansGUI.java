@@ -57,6 +57,8 @@ public class DogsandHumansGUI extends JFrame {
 		scrollPane.setBounds(22, 11, 101, 24);
 		contentPane.add(scrollPane);
 		
+		// Deklarera newHuman som en instansvariabel, alltså "JTextArea newHuman;" där uppe. Här nere sedan:
+		// newHuman = new JTextArea(); så blir du av med varningen i actionPerformed.
 		JTextArea newHuman = new JTextArea();
 		scrollPane.setViewportView(newHuman);
 		
@@ -100,7 +102,7 @@ public class DogsandHumansGUI extends JFrame {
 		JButton btnGetInfo = new JButton("Print info");
 		btnGetInfo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 infoTextArea.setText(human.getName() +" �ger en hund som heter ");
+				 infoTextArea.setText(human.getName() +" �ger en hund som heter ");
 				 infoTextArea.append(human.dog.name);
 			}
 		});

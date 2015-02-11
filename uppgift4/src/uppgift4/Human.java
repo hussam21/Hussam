@@ -15,7 +15,8 @@ public class Human {
 		
 		}else{
 			
-			System.out.println("F�r lite bokst�ver");
+			// om name är mindre än 3 bokstäver så är name = null, och det är inte bra.
+			System.out.println("F�r lite bokst�ver");
 			
 			
 		}
