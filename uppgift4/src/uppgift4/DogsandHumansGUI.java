@@ -17,11 +17,12 @@ import javax.swing.JLabel;
 import javax.swing.JTextPane;
 
 public class DogsandHumansGUI extends JFrame {
-	 public Human human;
-	 
-	 
+	 private Human human;
+	 private JTextArea textArea_1;
+	 private JTextArea Error;
 	 
 	private JPanel contentPane;
+	private JTextArea newHuman;
 	
 	/**
 	 * Launch the application.
@@ -59,14 +60,14 @@ public class DogsandHumansGUI extends JFrame {
 		scrollPane.setBounds(22, 11, 101, 24);
 		contentPane.add(scrollPane);
 		
-		JTextArea newHuman = new JTextArea();
+		newHuman = new JTextArea();
 		scrollPane.setViewportView(newHuman);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
 		scrollPane_1.setBounds(22, 46, 101, 24);
 		contentPane.add(scrollPane_1);
 		
-		JTextArea textArea_1 = new JTextArea();
+		textArea_1 = new JTextArea();
 		scrollPane_1.setViewportView(textArea_1);
 		
 		
@@ -90,8 +91,9 @@ public class DogsandHumansGUI extends JFrame {
 		contentPane.add(scrollPane_2);
 		
 		
-		JTextArea infoTextArea = new JTextArea();
+		final JTextArea infoTextArea = new JTextArea();
 		scrollPane_2.setViewportView(infoTextArea);
+
 		
 		JLabel lblInfo = new JLabel("Info");
 		lblInfo.setBounds(22, 96, 46, 14);
@@ -101,7 +103,7 @@ public class DogsandHumansGUI extends JFrame {
 		scrollPane_3.setBounds(10, 201, 382, 50);
 		contentPane.add(scrollPane_3);
 		
-		JTextArea Error = new JTextArea();
+		Error = new JTextArea();
 		scrollPane_3.setViewportView(Error);
 		
 		JLabel lblError = new JLabel("Error");

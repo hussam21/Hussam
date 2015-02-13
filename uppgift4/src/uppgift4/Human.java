@@ -15,10 +15,12 @@ public class Human {
 		
 		}else{
 			
+
 			
 			
 			error = "För lite bokstäver";
 			System.out.println("För lite bokstäver \n");
+
 			
 			
 		}
