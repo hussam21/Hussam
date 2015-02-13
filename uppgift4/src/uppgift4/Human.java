@@ -4,18 +4,21 @@ public class Human {
 	
 	public Dog dog;
 	public String name; 
-
+	public String error;
 	public Human(String name){
 		
 		System.out.println("human skapad!!"+ name);
 		
-		if(name.length() > 3){
+		if(name.length() >= 3){
 		
 		this.name=name;
 		
 		}else{
 			
-			System.out.println("För lite bokstäver");
+			
+			
+			error = "För lite bokstäver";
+			System.out.println("För lite bokstäver \n");
 			
 			
 		}
@@ -33,9 +36,7 @@ public class Human {
 	
 	
  	public String getName() {
- 		
- 		
- 		
+
 		return name;
 	}
 	
@@ -48,11 +49,11 @@ public class Human {
 	
 	
 	public String getInfo(){
-		return name;
 		
 		
-		
-		
+		String hej= this.getName() +" äger en hund som heter "+this.dog.name;
+		return hej;
+
 		
 	}
 	
