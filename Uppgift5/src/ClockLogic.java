@@ -19,6 +19,8 @@ public class ClockLogic implements ClockInterface {
    
     
     
+    
+    // kollar om alarm = tiden för att få igång larmet
 	if(alarmHour == hours && alarmMinute == minutes){
 	
 		clockGUI.contentPane.setBackground(Color.BLUE);
@@ -35,12 +37,16 @@ public class ClockLogic implements ClockInterface {
 		thread.start();
 	}
 	
+	
+	// sätt alarm
 	public void setAlarm(int Hours, int minutes){
 	
 		this.alarmHour= Hours;
 		this.alarmMinute= minutes;
 		clockGUI.alarmAt.setText(Hours+":"+minutes);
 		
+		
+		// kollar om användarna anger korrekt tid
 		if(Hours<hourMin || Hours > hourMax){
 		System.out.println("ange korrekt hour");
 		clockGUI.alarmAt.setText("");
@@ -69,6 +75,7 @@ public class ClockLogic implements ClockInterface {
 		
 	}
 	
+	//nollställ alarmtiden
 public void clearAlarm(){
 		
 		clockGUI.alarmAt.setText("");

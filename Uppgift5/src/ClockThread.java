@@ -22,6 +22,8 @@ public class ClockThread implements Runnable {
 	
 	public void run() {
 		
+		
+		// infinite loop och uppdaterar klocklogic
 		while(run){
 		try{
 			cal = Calendar.getInstance();
