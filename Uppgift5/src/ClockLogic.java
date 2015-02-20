@@ -7,7 +7,7 @@ public class ClockLogic implements ClockInterface {
 	public int alarmHour;
 	public int alarmMinute;
 	public Thread thread;
-	public final int hourMax = 24;
+	public final int hourMax = 23;
 	public final int hourMin = 0;
 	public final int minuteMax = 59;
 	public final int minuteMin = 0;
@@ -22,8 +22,10 @@ public class ClockLogic implements ClockInterface {
     
     // kollar om alarm = tiden för att få igång larmet
 	if(alarmHour == hours && alarmMinute == minutes){
-	
+
 		clockGUI.contentPane.setBackground(Color.BLUE);
+		
+
 		System.out.println("vakna");
 		
 		
@@ -43,7 +45,7 @@ public class ClockLogic implements ClockInterface {
 	
 		this.alarmHour= Hours;
 		this.alarmMinute= minutes;
-		clockGUI.alarmAt.setText(Hours+":"+minutes);
+		clockGUI.alarmAt.setText(String.format("%02d", Hours)+":"+String.format("%02d", minutes));
 		
 		
 		// kollar om användarna anger korrekt tid

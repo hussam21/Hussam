@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.ImageIcon;
+import java.awt.Color;
 
 
 public class digitalClockGUI extends JFrame {
@@ -27,7 +28,7 @@ public class digitalClockGUI extends JFrame {
 	public JTextArea textArea_1 = new JTextArea();
 	JLabel Clock = new JLabel("Clock");
 	JLabel alarmAt = new JLabel("alarm");
-	private final JLabel lblNewLabel = new JLabel("New label");
+	private final JLabel image = new JLabel("New label");
 
 	/**
 	 * Launch the application.
@@ -54,6 +55,7 @@ public class digitalClockGUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 455, 305);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.LIGHT_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -102,10 +104,10 @@ public class digitalClockGUI extends JFrame {
 
 		alarmAt.setBounds(193, 137, 46, 14);
 		contentPane.add(alarmAt);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Hussam\\workspace\\Uppgift5\\src\\Images\\untitled.png"));
-		lblNewLabel.setBounds(372, 11, 52, 50);
+		image.setIcon(new ImageIcon("C:\\Users\\Hussam\\workspace\\Uppgift5\\src\\Images\\untitled.png"));
+		image.setBounds(372, 11, 52, 50);
 		
-		contentPane.add(lblNewLabel);
+		contentPane.add(image);
 	}
 
 }
